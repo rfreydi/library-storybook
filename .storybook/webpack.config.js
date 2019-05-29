@@ -1,7 +1,7 @@
 // link: https://github.com/storybooks/storybook/issues/2718#issuecomment-400968205
 
 const path = require('path');
-var fs = require("fs");
+const fs = require("fs");
 const findUp = require('find-up');
 
 module.exports = ({ config }) => {
