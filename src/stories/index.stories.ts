@@ -1,8 +1,10 @@
-import { storiesOf } from '@storybook/angular';
+import {moduleMetadata, storiesOf} from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Welcome, Button } from '@storybook/angular/demo';
+import {AModule} from '@library-storybook/a';
+import {BModule} from '@library-storybook/b';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,
@@ -44,4 +46,14 @@ storiesOf('Another Button', module).add('button with link to another story', () 
     text: 'Go to Welcome Story',
     onClick: linkTo('Welcome'),
   },
+}));
+
+storiesOf('Libraries', module).addDecorator(
+  moduleMetadata({
+    imports: [AModule, BModule]
+  })
+).add('a', () => ({
+  template: '<a-a></a-a>'
+})).add('b', () => ({
+  template: '<b-b></b-b>'
 }));
