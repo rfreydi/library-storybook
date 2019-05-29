@@ -37,6 +37,41 @@
           }
         }
       }
+    },
+    "@library-storybook/b": {
+      "projectType": "library",
+      "root": "projects/library-storybook/b",
+      "sourceRoot": "projects/library-storybook/b/src",
+      "prefix": "b",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/library-storybook/b/tsconfig.lib.json",
+            "project": "projects/library-storybook/b/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/library-storybook/b/src/test.ts",
+            "tsConfig": "projects/library-storybook/b/tsconfig.spec.json",
+            "karmaConfig": "projects/library-storybook/b/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/library-storybook/b/tsconfig.lib.json",
+              "projects/library-storybook/b/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "@library-storybook/a"
 }

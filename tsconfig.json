@@ -24,6 +24,12 @@
       ],
       "@library-storybook/a/*": [
         "dist/library-storybook/a/*"
+      ],
+      "@library-storybook/b": [
+        "dist/library-storybook/b"
+      ],
+      "@library-storybook/b/*": [
+        "dist/library-storybook/b/*"
       ]
     }
   }
