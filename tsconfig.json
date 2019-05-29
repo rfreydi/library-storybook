@@ -20,16 +20,10 @@
     ],
     "paths": {
       "@library-storybook/a": [
-        "dist/library-storybook/a"
-      ],
-      "@library-storybook/a/*": [
-        "dist/library-storybook/a/*"
+        "projects/library-storybook/a/src/public-api.ts"
       ],
       "@library-storybook/b": [
-        "dist/library-storybook/b"
-      ],
-      "@library-storybook/b/*": [
-        "dist/library-storybook/b/*"
+        "projects/library-storybook/b/src/public-api.ts"
       ]
     }
   }
